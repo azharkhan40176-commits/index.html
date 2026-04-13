@@ -206,14 +206,36 @@ function sendToWhatsApp(e){
     <div id="product-list" class="products"></div>
     <h2>Get Best Price / Inquiry</h2>
 
-    <form action="https://formspree.io/f/https://formspree.io/f/xeevjaqg" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required><br>
-        <input type="email" name="email" placeholder="Your Email" required><br>
-        <input type="text" name="phone" placeholder="Your Phone" required><br>
-        <textarea name="message" placeholder="Your Requirement"></textarea><br>
+    <script>
+function sendToWhatsApp(e){
+    e.preventDefault(); // 🔥 form reload rokega
 
-        <button type="submit">Send Inquiry</button>
-    </form>
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
+
+    var url = "https://wa.me/9029382272?text="
+    + "*New Inquiry*%0a%0a"
+    + "*Name:* " + name + "%0a"
+    + "*Email:* " + email + "%0a"
+    + "*Phone:* " + phone + "%0a"
+    + "*Requirement:* " + message;
+
+    window.open(url, '_blank');
+}
+</script>        
+<h2>Get Best Price / Inquiry</h2>
+    <form onsubmit="sendToWhatsApp(event)">
+
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <input type="email" id="email" placeholder="Your Email" required><br>
+    <input type="text" id="phone" placeholder="Your Phone"><br>
+    <textarea id="message" placeholder="Your Requirement"></textarea><br>
+
+    <button type="submit">Send Message</button>
+
+</form>
 </div>
 
 <!-- ABOUT -->
@@ -229,13 +251,36 @@ function sendToWhatsApp(e){
 <div id="contact" class="page">
     <h1>Contact Us</h1>
 
-    <form action="https://formspree.io/f/xeevjaqg"method="POST"></form>
-        <input type="text" name="name" placeholder="Name"><br>
-        <input type="email" name="email" placeholder="Email"><br>
-        <input type="text" name="phone" placeholder="Phone"><br>
-        <textarea name="message" placeholder="Message"></textarea><br>
-        <button type="submit">Send Message</button>
-    </form>
+   <script>
+function sendToWhatsApp(e){
+    e.preventDefault(); // 🔥 form reload rokega
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
+
+    var url = "https://wa.me/9029382272?text="
+    + "*New Inquiry*%0a%0a"
+    + "*Name:* " + name + "%0a"
+    + "*Email:* " + email + "%0a"
+    + "*Phone:* " + phone + "%0a"
+    + "*Requirement:* " + message;
+
+    window.open(url, '_blank');
+}
+</script>        
+<h2>Get Best Price / Inquiry</h2>
+    <form onsubmit="sendToWhatsApp(event)">
+
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <input type="email" id="email" placeholder="Your Email" required><br>
+    <input type="text" id="phone" placeholder="Your Phone"><br>
+    <textarea id="message" placeholder="Your Requirement"></textarea><br>
+
+    <button type="submit">Send Message</button>
+
+</form>
        <br>
     <a href="catalog.pdf"><button>Download Catalog</button></a>
 </div>
